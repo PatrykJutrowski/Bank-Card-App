@@ -285,7 +285,7 @@ section{
     justify-content: center;
     width: 500px;
     background-image: linear-gradient(to right, rgb(180,204,223), rgb(75,130,175));
-    height: 250px;
+    height: fit-content;
     gap: 10px;
     border-radius: 5px;
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
