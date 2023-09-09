@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="BankCard.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <main class="scene">
+        <section class="card1">
+            <div class="card__face front-card">
+                <div class="name_type">
+                    <div class="Bank-Name">Bank Name</div>
+                    <div class="type-card">Credit Card</div>
+                </div>
+                <div class="chip_contactless">
+                    <div class="Chip">
+                        <div class="block block-grid1"></div>
+                        <div class="block"></div>
+                        <div class="block block-grid2" ></div>
+                        <div class="block"></div>
+                        <div class="block"></div>
+                        <div class="block"></div>
+                        <div class="block block-grid3"></div>
+                        <div class="block"></div>
+                        <div class="block block-grid4"></div>
+                        <div class="circle-top"></div>
+                        <div class="circle-bot"></div>
+                    </div>
+                    <div class="rotated-circles">
+                        <div class="rotate-circle"></div>
+                        <div  class="rotate-circle1"></div>
+                        <div  class="rotate-circle2"></div>
+                        <div  class="rotate-circle3"></div>
+                    </div>
+                </div>
+                <div class="cardnumber">
+                    <div class="card-number1">1234 1234 1234 1234</div>
+                </div>
+                <div class="valid">
+                    <div class="thru">VALID THRU</div>
+                    <div class="card-thru">03/30</div>
+                </div>
+                <div class="Cardholder">CARDHOLDER NAME</div>
+            </div>
+            <div class="card__face back-card">
+                <div class="magnetic_stripe"></div>
+                <div class="data_user">
+                    <div class="sign"></div>
+                    <div class="CVV">
+                        <i class="cvv">111</i>
+                    </div>
+                    <div class="type_card1">Type card</div>
+                </div>
+                <div class="lorem_ipsum">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="center-form">
+        <div class="form">
+            <div class="number-container" id="numberCard">
+                <label>Card Number</label>
+                <input type="text" name="card-number1" placeholder="1234 1234 1234 1234"
+                       id="card-number" maxlength="19" >
+            </div>
+            <div class="name-container">
+                <label>Holder</label>
+                <input type="text" id="name-text" maxlength="30" placeholder="Card Holder Name"  name="name"   >
+                <p class="paragraph"></p>
+            </div>
+            <div class="valid-thru-container">
+                <label>Valid</label>
+                <input type="text" placeholder="03/30" maxlength="5" name="thru-text1" id="valid-thru-text"    >
+            </div>
+            <div class="CVV-container">
+                <label>CVV</label>
+                <input type="text" placeholder="111" maxlength="3" name="cvv-text1" id="cvv-text"  >
+            </div>
+            <button id="submit">Submit</button>
+        </div>
+    </div>
+    <script src="BankCard.js" defer></script>
+</body>
+</html>
