@@ -1,0 +1,353 @@
+body {
+    font-family: sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.card1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+
+}
+
+.front-card {
+    background:
+            linear-gradient(
+    45deg, #7e7e7e 0%,
+            #e3e3e3 25%,
+            #787878 75%,
+            #7e7e7e 100%);
+    border-radius: 10px;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.Chip{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 13px 13px 13px;
+    grid-auto-rows: minmax(13px, auto);
+    grid-gap: 0;
+}
+
+.block{
+    background: rgb(183, 134, 40);
+    margin: 0;
+    padding: 0;
+    border: black solid 0.5px;
+    width: 13px;
+    height: 13px;
+}
+
+.circle-top{
+    position: absolute;
+    left: 31%;
+    top: 20%;
+    background: rgb(183, 134, 40);
+    width: 14px;
+    height: 14px;
+    border-radius:  50% ;
+    border: solid 1px;
+}
+.circle-bot{
+    position: absolute;
+    background: rgb(183, 134, 40);
+    width: 14px;
+    height: 14px;
+    border-radius:  50%;
+    left: 31%;
+    bottom: 15%;
+    z-index: 1;
+    border-top: 1px solid transparent;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+.block-grid1{
+    border-top-left-radius: 5px;
+}
+
+.block-grid2{
+    border-top-right-radius: 5px;
+}
+
+.block-grid3{
+    border-bottom-left-radius: 5px;
+}
+
+.block-grid4{
+    border-bottom-right-radius: 5px;
+}
+
+.rotate-circle {
+    /* Create the circle */
+    width:5px;
+    height: 5px;
+
+    border-radius: 50%;
+    /* Halve the circle */
+    border-right: 1px solid transparent;
+    border-bottom: 2px solid rgba(40,40,40,1);
+    border-left: 1px solid transparent;
+    border-top: 1px solid transparent;
+    /* Rotate the circle */
+    transform: rotate(-90deg);
+    position: absolute;
+    top: 50%;
+
+}
+.rotate-circle1 {
+    /* Create the circle */
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    /* Halve the circle */
+    border-right: 1px solid transparent;
+    border-bottom: 2px solid rgba(40,40,40,1);
+    border-left: 1px solid transparent;
+    border-top: 1px solid transparent;
+    /* Rotate the circle */
+    transform: rotate(-90deg);
+    position: absolute;
+    top: 43%;
+    left: 5%;
+}
+.rotate-circle2 {
+    /* Create the circle */
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    /* Halve the circle */
+    border-right: 1px solid transparent;
+    border-bottom: 2px solid rgba(40,40,40,1);
+    border-left: 1px solid transparent;
+    border-top: 1px solid transparent;
+    /* Rotate the circle */
+    transform: rotate(-90deg);
+    position: absolute;
+    left: 15%;
+    top: 35%;
+}
+.rotate-circle3 {
+    /* Create the circle */
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    /* Halve the circle */
+    border-right: 1px solid transparent;
+    border-bottom: 2px solid rgba(40,40,40,1);
+    border-left: 1px solid transparent;
+    border-top: 1px solid transparent;
+    /* Rotate the circle */
+    transform: rotate(-90deg);
+    position: absolute;
+    top: 28%;
+    left: 28%;
+}
+
+.rotated-circles{
+    position: relative;
+    width: 40px;
+    height: 40px;
+}
+
+.cardnumber{
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: 5px;
+}
+
+.name_type{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px;
+    color: red;
+}
+
+.chip_contactless{
+    display: flex;
+    flex-direction: row;
+    margin: 50px;
+    justify-content: space-between;
+    width: 20%;
+}
+
+.valid{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 5px;
+    justify-content: center;
+    margin: 10px;
+}
+
+.thru{
+    font-size: 10px;
+    width: 50px;
+}
+
+.Cardholder{
+    text-align: left;
+    margin: 25px;
+}
+
+.card1.is-flipped {
+    transform: translateX(-100%) rotateY(-180deg);
+}
+section{
+    position: relative;
+    height: 350px;
+}
+.card__face {
+    width: 500px;
+    height: 300px;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.back-card {
+    background:
+            linear-gradient(
+                    45deg, #7e7e7e 0%,
+                    #e3e3e3 25%,
+                    #787878 75%,
+                    #7e7e7e 100%);
+    border-radius: 10px;
+    transform: rotateY(180deg);
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.scene{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.magnetic_stripe{
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+    background: black;
+}
+
+.sign{
+    width: 50%;
+    height: 30px;
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+}
+
+.CVV{
+    width: 50px;
+    height: 10px;
+    background: ghostwhite;
+    color: black;
+    font-size: 10px;
+    text-align: center;
+}
+
+.data_user{
+    margin-top: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.lorem_ipsum{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    color: #2A2E30;
+    margin-top:50px;
+    width: 100%;
+}
+
+.lorem_ipsum p {
+    width: 70%;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    background-image: linear-gradient(to right, rgb(180,204,223), rgb(75,130,175));
+    height: 250px;
+    gap: 10px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+input{
+    display: flex;
+    align-items: flex-end;
+}
+
+.Alert{
+    position: absolute;
+    width: 300px;
+    top: 0;
+    left: 50%;
+    background: rgb(88, 225, 60);
+    border-radius: 10px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%, -50%) scale(0.1);
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+}
+
+.open-popup{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.close{
+    position: absolute;
+    transform: translate(-20%, -50%);
+    top: 20%;
+    right: 0;
+}
+
+.center-form{
+    display: flex;
+    justify-content: center;
+}
+
+.negative-alert1{
+    position: absolute;
+    width: 300px;
+    top: 0;
+    left: 50%;
+    background: rgb(229, 26, 64);
+    border-radius: 10px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%, -50%) scale(0.1);
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+}
+
+.open-alert{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
